@@ -1,0 +1,22 @@
+<div class="main posts-show">
+  <div class="container">
+    <div class="spa_name">
+      <%= @tweet.spa_name %>
+    </div>
+    <div class="tweets-show-image">
+      <img src="<%= @tweet.image %>" width="1000" height="600">
+    </div>
+    <div class="address-info">
+      <P class="address-content">住所</p>
+      <%= @tweet.address %>
+    </div>
+    <div class="url-info">
+      <p class="url-content">URL</p>
+      <a href="<%= @tweet.url %>"><%= @tweet.url %></a>
+    </div>
+
+    <div class="post-menus">
+      <%= link_to("編集","/tweets/#{@tweet.id}/edit")%>
+      <%= link_to("削除","/tweets/#{@tweet.id}/destroy",{method:"post"})%>
+  </div>
+</div>

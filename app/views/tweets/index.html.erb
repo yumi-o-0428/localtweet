@@ -1,0 +1,16 @@
+<div class="main posts-index">
+  <%= image_tag "index-top.jpg" ,class:"index-top" %>
+  <div class="contents">
+    <% @tweets.each do |tweet| %>
+      <div class="tweets-index-image">
+      <%= link_to("/tweets/#{tweet.id}") do %>
+        <img src= "<%= tweet.image %>" ,width="500" height="400">
+      <p class="tweet-index-item_name">
+        <%= tweet.spa_name %>
+      </p>
+      <% end %>
+      </div>
+    <% end %>
+  </div>
+  
+</div>

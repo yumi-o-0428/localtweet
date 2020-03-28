@@ -1,0 +1,7 @@
+ja:
+  activerecord:
+    attributes:
+      tweet:
+        spa_name: 温泉地名
+        image: 写真
+        
