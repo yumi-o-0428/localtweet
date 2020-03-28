@@ -1,0 +1,25 @@
+<div class="main tweet-new">
+  <div class="tweet-container">
+    <h1 class="form-heading">新規投稿</h1>
+    <%= form_for(@tweet,url: {controller: 'tweets', action: 'create' }) do |form| %>
+    <div class="form">
+      <div class="form-body">
+        <% @tweet.errors.full_messages.each do |message| %>
+          <div class="form-error">
+            <%= message %>
+          </div>
+        <% end %>
+        <p>温泉地名(必須)</p>
+        <%= form.text_field :spa_name, placeholder:"例)草津温泉" ,class:"form_spa_name" %>
+        <p>写真(必須)</p>
+        <%= form.file_field :image, class:"form_image" %>
+        <p>住所(任意)</p>
+        <%= form.text_field :address, placeholder:"例)群馬県吾妻郡草津町大字草津", class:"form_address" %>
+        <p>URL(任意)</p>
+        <%= form.text_field :url, placeholder:"例)https://www.kusatsu-onsen.ne.jp/", class:"form_url" %>
+        <input type="submit" value="投稿">
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
