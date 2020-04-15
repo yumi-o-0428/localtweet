@@ -1,0 +1,22 @@
+<%= render "layouts/header" %>
+<div class="main users-edit">
+  <div class="users-container">
+    <div class="form-heading">アカウントの編集</div>
+    <%= form_for(@user,url: {controller: 'users', action: 'update'}) do |form| %>
+    <div class="form users-form">
+      <div class="form-body">
+      <% @user.errors.full_messages.each do |message| %>
+          <div class="form-error">
+            <%= message %>
+          </div>
+        <% end %>
+        <p>ユーザー名</p>
+        <%= form.text_field :name, class:"form_user_name" %>
+        <p>メールアドレス</p>
+        <%= form.text_field :email, class:"form_user_email" %>
+        <input type="submit" value="保存">
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div> 

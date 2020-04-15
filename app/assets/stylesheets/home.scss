@@ -65,24 +65,20 @@ header {
   position: absolute;
   z-index: 1;
   width: 100%;
-  background-color: #d4ba9f;
+  background-color:#fff;
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16);
 
 
 
 .header-logo {
   height: 90px;
   float: left;
-  //padding-left: 20px;
-  background-color:#d4ba9f;
+  padding-top: 15px;
+  padding-left: 30px;
+  background-color:#fff;
   font-size: 22px;
-  
-  background-color: #fff;
 }
 
-.header-logo a{
-  color: white;
-  font-size: 22px;
-}
 
 .header-menus {
   float: right;
@@ -117,6 +113,7 @@ header {
   font-size: 13px;
 }*/
 }
+
 /* top ================================ */
 .top-main {
   //padding: 200px 0 100px;
@@ -127,7 +124,7 @@ header {
   height: 100vh;
   min-height: 100%;
   color: black;
-  background-color: #d4ba9f;
+  background-color: #fff;
   //background-repeat: no-repeat;
   //background-position: center 50%;
   //background-size: cover;
@@ -136,12 +133,12 @@ header {
 .left-box{
   height:100%;
   width: 50%;
-  //background-color: #d4ba9f;
+  background-color: #fff;
   .top{
     //text-align: center;
     //@extend: center;
-    margin-top: 170px;
-    margin-left: 100px;
+    margin-top: 80px;
+    margin-left: 150px;
   }
 }
 
@@ -151,14 +148,32 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-.message {
-  text-align: center;
-  align-items: center;
-  //position: relative;
+  .message {
+    text-align: center;
+    align-items: center;
+    //position: relative;
+  }
+  .signup-btn{
+    display: inline-block;
+    border: solid 3px red;/*線*/
+    background: red;
+    border-radius: 10px;/*角の丸み*/
+    margin:30px;
+    font-size: 15px;
+    padding:10px 10px;
+    
+    
+  }
+  .signup-btn a{
+    text-decoration: none;
+    color: #fff;
+  }
 }
-}
+
+  
+
 .top-main h2 {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 500;
   line-height: 1.3;
   -webkit-font-smoothing: antialiased;
@@ -166,14 +181,14 @@ header {
 }
 
 .top-main p {
-  font-size: 36px;
+  font-size: 20px;
 }
 
 /* about ================================ */
 .about-main {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
-  background-color: #d4ba9f;
+  background-color: #fff;
   padding: 180px 8% 0;
   color: black;
 }
@@ -186,7 +201,7 @@ header {
 
 .about-main p {
   font-weight: 200;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .about-img {

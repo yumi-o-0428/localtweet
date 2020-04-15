@@ -46,6 +46,6 @@ class TweetsController < ApplicationController
 
 private
   def tweet_params
-    params.require(:tweet).permit(:spa_name,:image,:address,:url)
+    params.require(:tweet).permit(:spa_name,:image,:address,:url,:area,:spring_quality)
   end
 end
