@@ -1,11 +1,18 @@
+<%= render "layouts/header" %>
 <div class="main top-main">
   <div class="left-box">
-    <%= image_tag "top2.jpg" , class: "top",size: '700x600'%>
+    <%= image_tag "top.jpg" , class: "top",size: '500x600'%>
   </div>
   <div class="right-box">
     <div class="message">
       <p>地域にはまだ知らない温泉がある</p>
       <h2>さぁ、日本中の温泉を旅しよう</h2>
+    <ul class="user_box">
+      <li class="signup-btn"><%= link_to("新規登録","/users/signup") %></li>
+    </ul>
+    </div>
   </div>
 </div>
+
+
 

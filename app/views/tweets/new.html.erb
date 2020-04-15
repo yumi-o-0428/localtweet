@@ -1,3 +1,4 @@
+<%= render "layouts/header" %>
 <div class="main tweet-new">
   <div class="tweet-container">
     <h1 class="form-heading">新規投稿</h1>
@@ -11,8 +12,30 @@
         <% end %>
         <p>温泉地名(必須)</p>
         <%= form.text_field :spa_name, placeholder:"例)草津温泉" ,class:"form_spa_name" %>
+        <p>泉質(必須)</p>
+        <label><%= form.radio_button :spring_quality, "二酸化炭素塩泉" %>二酸化炭素塩泉</label>
+        <label><%= form.radio_button :spring_quality, "硫酸塩泉" %>硫酸塩泉</label>
+        <label><%= form.radio_button :spring_quality, "炭酸水素塩泉" %>炭酸水素塩泉</label>
+        <label><%= form.radio_button :spring_quality, "塩化物泉" %>塩化物泉</label>
+        <label><%= form.radio_button :spring_quality, "単純温泉" %>単純温泉</label>
+        <label><%= form.radio_button :spring_quality, "含よう素泉" %>含よう素泉</label>
+        <label><%= form.radio_button :spring_quality, "放射能泉" %>放射能泉</label>
+        <label><%= form.radio_button :spring_quality, "酸性泉" %>酸性泉</label>
+        <label><%= form.radio_button :spring_quality, "硫黄泉" %>硫黄泉</label>
+        <label><%= form.radio_button :spring_quality, "含鉄泉" %>含鉄泉</label>
         <p>写真(必須)</p>
         <%= form.file_field :image, class:"form_image" %>
+        <p>エリア(必須)</p>
+        <label><%= form.radio_button :area, "北海道" %>北海道</label>
+        <label><%= form.radio_button :area, "東北" %>東北</label>
+        <label><%= form.radio_button :area, "関東" %>関東</label>
+        <label><%= form.radio_button :area, "北陸/甲信越" %>北陸/甲信越</label>
+        <label><%= form.radio_button :area, "東海" %>東海</label>
+        <label><%= form.radio_button :area, "関西（近畿）" %>関西（近畿）</label>
+        <label><%= form.radio_button :area, "中国" %>中国</label>
+        <label><%= form.radio_button :area, "四国" %>四国</label>
+        <label><%= form.radio_button :area, "九州" %>九州</label>
+        <label><%= form.radio_button :area, "沖縄" %>沖縄</label>
         <p>住所(任意)</p>
         <%= form.text_field :address, placeholder:"例)群馬県吾妻郡草津町大字草津", class:"form_address" %>
         <p>URL(任意)</p>

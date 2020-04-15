@@ -2,6 +2,12 @@ Rails.application.routes.draw do
   get "/" => "home#top"
   get "about" => "home#about"
 
+  get "users/signup" => "users#new"
+  post "users/create" => "users#create"
+  get "users/:id" => "users#show"
+  get "users/:id/edit" => "users#edit"
+  patch "users/:id/update" => "users#update"
+
   get "tweets/index" => "tweets#index"
   get "tweets/new" => "tweets#new"
   get "tweets/:id" => "tweets#show"

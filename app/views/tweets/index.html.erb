@@ -1,16 +1,41 @@
+<%= render "layouts/header" %>
 <div class="main posts-index">
-  <%= image_tag "index-top.jpg" ,class:"index-top" %>
-  <div class="contents">
+  <div class="index-top">
+  <!--<h1 class="top-text">まだ見ぬ温泉地に出会える旅へ</h1>-->
+  </div>
+  <div class="contents-text">
+    <h1 class="what">
+    温泉地の魅力をもっと広く伝えたい
+    </h1>
+    <p class="what-message">
+    日本には、3,000ほどの温泉地、20,000ほどの温泉施設があります。</br>
+    しかし、そのほとんどは未だ知られていない温泉地ばかり。</br>
+    そんな地域に眠る魅力的な温泉地を見つけ出し、日本中を旅してみよう。
+    </p>
+    <h1 class="index-title">
+    温泉地一覧
+    </h1>
+  </div>
+  <div class="contents-index">
     <% @tweets.each do |tweet| %>
-      <div class="tweets-index-image">
+      <div class="content">
       <%= link_to("/tweets/#{tweet.id}") do %>
-        <img src= "<%= tweet.image %>" ,width="500" height="400">
-      <p class="tweet-index-item_name">
-        <%= tweet.spa_name %>
-      </p>
+        <div class="content__image_box">
+          <img src= "<%= tweet.image %>" ,width="300", height="280">
+        <p class="tweet-index-item_name">
+          <%= tweet.spa_name %>
+        </p>
+        <div class="tweet-info">
+          <div class="tweet-info_area">
+            <%= tweet.area%>
+          </div>
+          <div class="tweet-index-item_name">
+            <%= tweet.spring_quality%>
+          </div>
+        </div>
+        </div>
       <% end %>
       </div>
     <% end %>
   </div>
-  
 </div>

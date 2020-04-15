@@ -1,46 +1,98 @@
 * {
   box-sizing: border-box;
 }
+
+
+
 /* posts/index ================================ */
 .posts-index{
-  height: 100%;
-  width: 100%;
   //background-color: red;
-  overflow: scroll;
-}
-.index-top{
-  height: 700px;
-  width: 100%;
-  object-fit: cover;
-}
+  //overflow: scroll;
 
+  .index-top{
+    height: 500px;
+    width: 100%;
+    //object-fit: cover;
+    background-size:cover;
+    background-image: image-url("index-top.jpg");
+    background-color: rgba(0,0,0, 0.3);
+    background-blend-mode: darken;
+    //background-color:rgba(255,255,255,0.2);
+    //background-blend-mode:lighten;
+    /*.top-text{
+      color: #fff;
+      font-size: 80px;
+      text-align: center;
+      padding-top: 200px;
+      font-family: 'Osaka',sans-serif;
+    }*/
+  }
+  .what{
+    width: 500px;
+    margin: 0 auto;
+    padding-top: 70px;
+    font-size: 30px;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-position: under;
+  }
+  .what-message{
+    margin: 0 auto;
+    width: 1100px;
+    padding-top: 30px;
+    font-size: 20px;
+    text-align: center;
+  }
+  .index-title{
+    width: 210px;
+    margin: 0 auto;
+    padding-top: 150px;
+    font-size: 30px;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-position: under;
+  }
 
-/*温泉地カード*/
-.contents{
-  width :1600px;
-  height: 100%;
-  margin:100px auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  //background-color: blue;
-  //padding: 0 20px;
-}
-.tweets-index-image {
-  background-repeat: no-repeat;
-  height: 500px;
-  overflow: hidden;
-  box-shadow: 0 2px 6px #c1ced7;
-  object-fit: cover;
-  
-}
-.tweet-index-item_name{
-  text-decoration: none;
-  font-size: 20px;
-  text-align: center;
-}
+  /*温泉地カード*/
+  .contents-index{
+    width :1000px;
+    margin:70px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    background-repeat: no-repeat;
+    
+    //background-color: blue;
+    //padding: 0 20px;
 
+    .content {
+      height: 400px;
+      box-shadow: 2px 2px 6px 6px #8f9396;
+      object-fit: cover;
+      a{
+        text-decoration: none;
+      }
+      &__image_box{
+        width: 100%;
+        height: 300px;
+        padding: 10px;
+        img{
+          max-width: 100%;
+          max-height: 100%;
+        }
+        
+      }
 
+    }
+    .tweet-index-item_name{
+      font-size: 20px;
+      text-align: center;
+      color: black;
+      padding-bottom: 20px;
+    }
+
+    }
+}
 /*.post-left img {
   width: 50px;
   height: 50px;
@@ -73,35 +125,31 @@
 .posts-show {
   width: 100%;
   //height: 100%;
-  padding: 120px;
+  padding: 60px 150px;
 
   .container{
-    width: 1500px;
+    //width: 1500px;
     //background-color: red;
     margin: 0 auto;
 
     .spa_name{
       width: 100%;
       height: 100px;
-      font-size: 40px;
+      font-size: 30px;
       //background-color: green;
       line-height: 100px;
       padding-left: 10px;
     }
 
-    .tweets-show-image{
-      width: 1000px;
-      height:600px;
-      //background-color: blue;
-    }
+    
     
     .address-info{
       width: 100%;
-      height: 100px;
-      font-size: 25px;
+      height: 70px;
+      font-size: 20px;
       //background-color: pink;
       display: flex;
-      line-height: 100px;
+      line-height: 70px;
       padding-right: 10px;
       .address-content{
         padding-right: 120px;
@@ -111,11 +159,11 @@
     }
     .url-info{
       width: 100%;
-      height: 100px;
-      font-size: 25px;
+      height: 70px;
+      font-size: 20px;
       //background-color:gray;
       display: flex;
-      line-height: 100px;
+      line-height: 70px;
       padding-right: 10px;
       .url-content{
         padding-right: 120px;

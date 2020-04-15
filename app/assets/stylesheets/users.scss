@@ -1,0 +1,87 @@
+/*ユーザーマイページ*/
+.user-show{
+  width: 100%;
+  height: 100%;
+  .container{
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    .user{
+      text-align: center;
+      padding: 20px;
+      margin-top: 100px;
+      h2{
+        font-size: 50px;
+      }
+      p{
+        font-size: 20px;
+      }
+    }
+  }
+}
+.a{
+  font-size: 30px;
+}
+
+/*新規登録・編集画面-------------------------------------*/
+.users-container{
+  width: 1000px;
+  height: 100%;
+  margin: 50px auto;
+  //background-color: red;
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 0 4px gray;
+  .form-heading{
+    color: black;
+    font-size: 30px;
+  }
+  .users-form {
+    margin: 0 50px;
+    .form-body {
+      padding: 30px;
+      p{
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+    }
+    .form_user_name{
+      width: 100%;
+      border: 1px solid #d8dadf;
+      padding: 10px;
+      color: #57575f;
+      font-size: 20px;
+      letter-spacing: 2px;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 30px;
+    }
+    .form_user_email{
+      width: 100%;
+      border: 1px solid #d8dadf;
+      padding: 10px;
+      color: #57575f;
+      font-size: 20px;
+      letter-spacing: 2px;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 30px;
+    }
+    
+  }
+  .form input[type="submit"] {
+    background-color: red;
+    font-size: 20px;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    font-weight: 300;
+    width: 120px;
+    border-radius: 10px;
+    margin-top: 8px;
+    margin-bottom: 0;
+    float: right;
+  }
+}
+
+/*編集--------------------------------------*/
