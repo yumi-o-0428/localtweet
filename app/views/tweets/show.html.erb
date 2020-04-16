@@ -7,6 +7,19 @@
     <div class="tweets-show-image">
       <img src="<%= @tweet.image %>" width="700" height="400">
     </div>
+    <div class="content__info__box">
+      <div class="content__info__box__area">
+        <i class="fas fa-map-marker-alt"></i>
+        <%= @tweet.area%>
+      </div>
+      <div class="content__info__box__spring_quality">
+        <%= image_tag "onsen_icon.jpg", class:"onsen_icon", size:'18x20' %>
+        <%= @tweet.spring_quality %>
+      </div>
+    </div>
+    <% @tweet.tag_list.each do |tag| %>
+      <span class="tags"><%= "##{tag}" %></span>
+    <% end %>
     <div class="address-info">
       <P class="address-content">住所</p>
       <%= @tweet.address %>
