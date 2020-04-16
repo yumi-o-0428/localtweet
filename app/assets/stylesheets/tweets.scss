@@ -17,15 +17,6 @@
     background-image: image-url("index-top.jpg");
     background-color: rgba(0,0,0, 0.3);
     background-blend-mode: darken;
-    //background-color:rgba(255,255,255,0.2);
-    //background-blend-mode:lighten;
-    /*.top-text{
-      color: #fff;
-      font-size: 80px;
-      text-align: center;
-      padding-top: 200px;
-      font-family: 'Osaka',sans-serif;
-    }*/
   }
   .what{
     width: 500px;
@@ -46,7 +37,7 @@
   .index-title{
     width: 210px;
     margin: 0 auto;
-    padding-top: 150px;
+    padding-top: 100px;
     font-size: 30px;
     font-weight: 700;
     text-decoration: underline;
@@ -61,6 +52,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     background-repeat: no-repeat;
+    margin-bottom: 100px;
     
     .content {
       height: 100%;
@@ -104,7 +96,6 @@
           }
         }
         &__tags{
-          //display: flex;
           font-size: 12px;
           color: #fff;
           &__list{
@@ -379,35 +370,34 @@
     float: right;
   }
   .form input[type="radio"] {
-    display: none; /* ラジオボタンを非表示にする */
+    display: none; 
     }
   .label_box{
     display: flex;
-    -webkit-flex-wrap: wrap; /* Safari */
+    -webkit-flex-wrap: wrap; 
     flex-wrap: wrap;
     display: -webkit-flex;
   }
     label{
-      display: block; /* ブロックレベル要素化する */
-      //: left; /* 要素の左寄せ・回り込を指定する */
-      margin: 5px; /* ボックス外側の余白を指定する */
-      width: 150px; /* ボックスの横幅を指定する */
-      height: 45px; /* ボックスの高さを指定する */
-      padding-left: 5px; /* ボックス内左側の余白を指定する */
-      padding-right: 5px; /* ボックス内御右側の余白を指定する */
-      //color: #b20000; /* フォントの色を指定 */
-      text-align: center; /* テキストのセンタリングを指定する */
-      line-height: 45px; /* 行の高さを指定する */
-      cursor: pointer; /* マウスカーソルの形（リンクカーソル）を指定する */
-      border: 2px solid #1DCCCA;/* ボックスの境界線を実線で指定する */
-      border-radius: 5px; /* 角丸を指定する */
+      display: block; 
+      margin: 5px; 
+      width: 150px; 
+      height: 45px; 
+      padding-left: 5px; 
+      padding-right: 5px; 
+      
+      text-align: center; 
+      line-height: 45px; 
+      cursor: pointer; 
+      border: 2px solid #1DCCCA;
+      border-radius: 5px; 
     }
     label:hover{
     background: #1DCCCA;
     }
     .form input[type="radio"]:checked + label {
-      background: #1DCCCA;/* マウス選択時の背景色を指定する */
-      color: #ffffff; /* マウス選択時のフォント色を指定する */
+      background: #1DCCCA;
+      color: #ffffff; 
       }
 
 /*.posts-new textarea {
