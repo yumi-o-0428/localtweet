@@ -22,17 +22,26 @@
       <%= link_to("/tweets/#{tweet.id}") do %>
         <div class="content__image_box">
           <img src= "<%= tweet.image %>" ,width="300", height="280">
-        <p class="tweet-index-item_name">
-          <%= tweet.spa_name %>
-        </p>
-        <div class="tweet-info">
-          <div class="tweet-info_area">
-            <%= tweet.area%>
-          </div>
-          <div class="tweet-index-item_name">
-            <%= tweet.spring_quality%>
-          </div>
         </div>
+        <div class="content__info">
+          <div class="content__info__name">
+          <%= tweet.spa_name %>
+          </div>
+          <div class="content__info__box">
+            <div class="content__info__box__area">
+              <i class="fas fa-map-marker-alt"></i>
+              <%= tweet.area%>
+            </div>
+            <div class="content__info__box__spring_quality">
+              <%= image_tag "onsen_icon.jpg", class:"onsen_icon", size:'18x20' %>
+              <%= tweet.spring_quality %>
+            </div>
+          </div>
+          <div class="content__info__tags">
+          <% tweet.tag_list.each do |tag| %>
+            <div class="content__info__tags__list"><%= "##{tag}" %></div>
+          <% end %>
+          </div>
         </div>
       <% end %>
       </div>

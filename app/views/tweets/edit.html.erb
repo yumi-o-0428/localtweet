@@ -14,6 +14,54 @@
       <%= form.text_field :spa_name, placeholder:"例)草津温泉" ,class:"form_spa_name" %>
       <p>写真(必須)</p>
       <%= form.file_field :image, class:"form_image" %>
+      <p>泉質(必須)</p>
+          <div class="label_box">
+            <%= form.radio_button :spring_quality, "二酸化炭素塩泉", class:"radio_btn", id:"spring_quality1" %>
+            <%= form.label "二酸化炭素塩泉", for:"spring_quality1" %>
+            <%= form.radio_button :spring_quality, "硫酸塩泉", class:"radio_btn", id:"spring_quality2" %>
+            <%= form.label "硫酸塩泉", for:"spring_quality2" %>
+            <%= form.radio_button :spring_quality, "炭酸水素塩泉", class:"radio_btn", id:"spring_quality3" %>
+            <%= form.label "炭酸水素塩泉", for:"spring_quality3" %>
+            <%= form.radio_button :spring_quality, "塩化物泉", class:"radio_btn", id:"spring_quality4" %>
+            <%= form.label "塩化物泉", for:"spring_quality4" %>
+            <%= form.radio_button :spring_quality, "単純温泉", class:"radio_btn", id:"spring_quality5" %>
+            <%= form.label "単純温泉", for:"spring_quality5" %>
+            <%= form.radio_button :spring_quality, "含よう素泉", class:"radio_btn", id:"spring_quality6" %>
+            <%= form.label "含よう素泉", for:"spring_quality6" %>
+            <%= form.radio_button :spring_quality, "放射能泉", class:"radio_btn", id:"spring_quality7" %>
+            <%= form.label "放射能泉", for:"spring_quality7" %>
+            <%= form.radio_button :spring_quality, "酸性泉", class:"radio_btn", id:"spring_quality8" %>
+            <%= form.label "酸性泉", for:"spring_quality8" %>
+            <%= form.radio_button :spring_quality, "硫黄泉", class:"radio_btn", id:"spring_quality9" %>
+            <%= form.label "硫黄泉", for:"spring_quality9" %>
+            <%= form.radio_button :spring_quality, "含鉄泉", class:"radio_btn", id:"spring_quality10" %>
+            <%= form.label "含鉄泉", for:"spring_quality10" %>
+          </div>
+        <p>エリア(必須)</p>
+          <div class="label_box">
+            <%= form.radio_button :area, "北海道", class:"radio_btn", id:"area1" %>
+            <%= form.label "北海道", for:"area1" %>
+            <%= form.radio_button :area, "東北", class:"radio_btn", id:"area2" %>
+            <%= form.label "東北", for:"area2" %>
+            <%= form.radio_button :area, "関東" , class:"radio_btn", id:"area3" %>
+            <%= form.label "関東", for:"area3" %>
+            <%= form.radio_button :area, "北陸/甲信越", class:"radio_btn", id:"area4" %>
+            <%= form.label "北陸/甲信越", for:"area4" %>
+            <%= form.radio_button :area, "東海" , class:"radio_btn", id:"area5" %>
+            <%= form.label "東海", for:"area5" %>
+            <%= form.radio_button :area, "関西（近畿）" , class:"radio_btn", id:"area6" %>
+            <%= form.label "関西（近畿）", for:"area6" %>
+            <%= form.radio_button :area, "中国" , class:"radio_btn", id:"area7" %>
+            <%= form.label "中国", for:"area7" %>
+            <%= form.radio_button :area, "四国" , class:"radio_btn", id:"area8" %>
+            <%= form.label "四国", for:"area8" %>
+            <%= form.radio_button :area, "九州" , class:"radio_btn", id:"area9" %>
+            <%= form.label "九州", for:"area9" %>
+            <%= form.radio_button :area, "沖縄" , class:"radio_btn", id:"area10" %>
+            <%= form.label "沖縄", for:"area10" %>
+          </div>
+        <p>タグ</p>
+        <%= form.text_field :tag_list, value: @tweet.tag_list.join(','), class: "form_tags"%>
       <p>住所(任意)</p>
       <%= form.text_field :address, placeholder:"例)群馬県吾妻郡草津町大字草津", class:"form_address" %>
       <p>URL(任意)</p>
