@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+footer{
+  height: 150px;
+  
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #1a1a1a;
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16);
+  text-align: center;
+  .footer_menu{
+    padding: 50px;
+    color:#fff;
+    
+  &__list{
+    margin-bottom: 10px;
+    a{
+    text-decoration: none;
+    color:#fff;
+    font-size: 15px;
+    padding: 0 40px;
+    }
+  }
+  &__copy{
+    font-size: 12px;
+  }
+}
+}
