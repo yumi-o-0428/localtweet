@@ -12,9 +12,8 @@ header {
 
 
 .header-logo {
-  height: 90px;
   float: left;
-  padding-top: 20px;
+  padding-top: 17px;
   padding-left: 40px;
   background-color:#fff;
   font-size: 22px;
@@ -23,31 +22,51 @@ header {
 
 .header-menus {
   float: right;
-  padding-right: 20px;
-}
-
-.header-menus li {
-  float: left;
-  line-height: 90px;
-  font-size: 20px;
-  line-height: 90px;
-  padding-left: 15px;
-  .fas {
-    font-size: 30px;
-    margin-top: 30px;
-  }
-}
-
-.header-menus a {
-  float: left;
-  font-size: 15px;
-  color: black;
-  text-decoration: none;
-}
-
-.header-menus .fa {
   padding-right: 5px;
-}
+
+
+  &__list{
+    float: left;
+    //line-height: 90px;
+    font-size: 15px;
+    padding:28px;
+    
+    .fas {
+      font-size: 30px;
+      margin-top: 2px;
+    }
+    .red-btn{
+      border: 1px solid rgb(223, 86, 86);
+      padding: 5px 7px;
+      color: rgb(223, 86, 86);
+      border-radius: 5px;
+      font-size: 13px;
+    }
+    .red-btn:hover{
+      background-color: rgb(223, 86, 86);
+      color: #fff;
+    }
+    .blue-btn{
+      border: 1px solid #1DCCCA;
+      padding: 5px 7px;
+      color: #1DCCCA;
+      border-radius: 5px;
+      font-size: 13px;
+    }
+    .blue-btn:hover{
+      background-color: #1DCCCA;
+      color: #fff;
+    }
+  }
+
+  a {
+  float: left;
+  text-decoration: none;
+  margin-right: 15px;
+  color: black;
+  }
+
+
 
 /*.header-menus input[type="submit"] {
   padding: 0 20px;
@@ -57,4 +76,5 @@ header {
   margin: 0;
   font-size: 13px;
 }*/
+}
 }
