@@ -18,7 +18,7 @@
       </div>
     </div>
     <% @tweet.tag_list.each do |tag| %>
-      <span class="tags"><%= "##{tag}" %></span>
+      <%= link_to "##{tag}",tweets_tags_index_path(tag_name: tag),class:"tags" %>
     <% end %>
     <div class="address-info">
       <P class="address-content">住所</p>
@@ -29,6 +29,7 @@
       <a href="<%= @tweet.url %>"><%= @tweet.url %></a>
     </div>
 
+  
     <div class="post-menus">
       <%= link_to("編集","/tweets/#{@tweet.id}/edit")%>
       <%= link_to("削除","/tweets/#{@tweet.id}/destroy",{method:"post"})%>

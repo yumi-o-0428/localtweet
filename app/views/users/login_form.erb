@@ -1,0 +1,23 @@
+<%= render "layouts/header" %>
+<div class="main users-new">
+  <div class="users-container">
+    <div class="form-heading">ログイン</div>
+    <div class="form users-form">
+      <div class="form-body">
+      <% if @error_message %>
+        <div class="form-error">
+          <%= @error_message %>
+        </div>
+      <% end %>
+      <%= form_for(:session, url: login_path) do |form| %>
+        <p>メールアドレス</p>
+        <%= form.text_field :email, class:"form_user_email" %>
+        <p>パスワード</p>
+        <%= form.password_field :password, class:"form_user_email"%>
+        <input type="submit" value="ログイン">
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

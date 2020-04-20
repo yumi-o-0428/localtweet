@@ -12,6 +12,8 @@
         <% end %>
         <p>ユーザー名</p>
         <%= form.text_field :name, class:"form_user_name" %>
+        <p>プロフィール写真</p>
+        <%= form.file_field :image_name, class:"form_user_image_name" %>
         <p>メールアドレス</p>
         <%= form.text_field :email, class:"form_user_email" %>
         <input type="submit" value="保存">
