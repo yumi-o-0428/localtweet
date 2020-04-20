@@ -4,4 +4,6 @@ ja:
       tweet:
         spa_name: 温泉地名
         image: 写真
+        spring_quality: 泉質
+        area: エリア
         

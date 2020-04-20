@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   get "/" => "home#top"
   get "about" => "home#about"
 
+  get "login" => "users#login_form"
+  post "login" => "users#login"
+  post "logout" => "users#logout"
   get "users/signup" => "users#new"
   post "users/create" => "users#create"
   get "users/:id" => "users#show"
@@ -15,5 +18,6 @@ Rails.application.routes.draw do
   get "tweets/:id/edit" => "tweets#edit"
   patch "tweets/:id/update" => "tweets#update"
   post "tweets/:id/destroy" => "tweets#destroy"
+  get "tweets/tags/index" => "tweets#tags_index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

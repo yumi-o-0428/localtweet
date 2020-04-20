@@ -1,21 +1,9 @@
-<%= render "layouts/header", collections:  "@users"%>
+<%= render "layouts/header" %>
 
 <div class="main posts-index">
-  <div class="index-top">
-  <!--<h1 class="top-text">まだ見ぬ温泉地に出会える旅へ</h1>-->
-  </div>
-  <div class="contents-text">
-    <h1 class="what">
-    温泉地の魅力をもっと広く伝えたい
-    </h1>
-    <p class="what-message">
-    日本には、3,000ほどの温泉地、20,000ほどの温泉施設があります。</br>
-    しかし、そのほとんどは未だ知られていない温泉地ばかり。</br>
-    そんな地域に眠る魅力的な温泉地を見つけ出し、日本中を旅してみよう。
-    </p>
-    <h1 class="index-title">
-    温泉地一覧
-    </h1>
+  <div class="tag_title">
+    <%= "##{params[:tag_name]}" %>
+    <div class="tag_title__info"><%= "「#{params[:tag_name]}」に関する温泉地の一覧" %></div>
   </div>
   <div class="contents-index">
     <% @tweets.each do |tweet| %>
@@ -45,12 +33,8 @@
           </div>
         </div>
       <% end %>
-      </div>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
+</div>
 <%= render "layouts/footer" %>
 </div>
-
-
-
-

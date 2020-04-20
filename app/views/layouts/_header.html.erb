@@ -1,17 +1,32 @@
 <header>
-  <div class="header-logo">
-    <%= link_to image_tag("logo.jpg",size: '200x50'),"/" %>
-  </div>
+  <% if session[:user_id] %>
+    <div class="header-logo">
+      <%= link_to image_tag("logo.jpg",size: '200x50'),"/tweets/index" %>
+    </div>
+  <% else %>
+    <div class="header-logo">
+      <%= link_to image_tag("logo.jpg",size: '200x50'),"/" %>
+    </div>
+  <% end %>
   
   <ul class="header-menus">
-    <li>
-      <%= link_to("@LOCALとは", "/about") %>
-    </li>
-    <li>
-      <%= link_to("新規投稿","/tweets/new") %>
-    </li>
-    <li>
-      <%= link_to("投稿一覧","/tweets/index") %>
-    </li>
+    <% if session[:user_id] %>
+      <li>
+      <%= link_to ("/users/#{session[:user_id]}") do %>
+        <i class="fas fa-user-circle"></i>
+      <% end %>
+      </li>
+      <li>
+        <%= link_to("新規投稿","/tweets/new") %>
+      </li>
+      <li>
+        <!-- ログアウト用のリンクを追加してください -->
+        <%= link_to("ログアウト", "/logout", {method: :post}) %>
+      </li>
+    <% else %>
+      <li>
+        <%= link_to("@LOCALとは", "/about") %>
+      </li>
+    <% end %>
   </ul>
 </header>

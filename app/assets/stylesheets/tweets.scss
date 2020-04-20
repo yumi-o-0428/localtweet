@@ -75,6 +75,7 @@
         &__name{
           font-size: 20px;
           padding-bottom: 10px;
+          color: #2D3133;
         }
         &__box{
           display: flex;
@@ -97,7 +98,10 @@
         }
         &__tags{
           font-size: 12px;
-          color: #fff;
+          a{
+            color: #fff;
+          }
+          
           &__list{
             padding-right: 5px;
             border: 1px solid #ad8407;
@@ -114,6 +118,22 @@
     }
   }
 }
+
+/* タグのindex ================================ */
+
+.tag_title{
+  width: 1100px;
+  margin: 50px auto;
+  font-size: 40px;
+  font-weight: bold;
+  border-bottom: solid 1px #1a1a1a;
+  &__info{
+    font-size: 18px;
+    font-weight: normal;
+  }
+}
+
+
 
 /*.post-left img {
   width: 50px;
@@ -146,7 +166,6 @@
 /* 温泉地詳細tweets/show ================================ */
 .posts-show {
   width: 100%;
-  //height: 100%;
   padding: 60px 150px;
 
   .container{
@@ -191,14 +210,13 @@
       padding:2px;
       text-align: center;
       margin-bottom: 2px;
-      //overflow: hidden;
+      text-decoration: none;
     }
     
     .address-info{
       max-width: 100%;
       height: 70px;
       font-size: 20px;
-      //background-color: pink;
       display: flex;
       line-height: 70px;
       padding-right: 10px;

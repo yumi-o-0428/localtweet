@@ -44,6 +44,13 @@ class TweetsController < ApplicationController
     redirect_to("/tweets/index")
   end
 
+  def tags_index
+    if params[:tag_name]
+      @tweets = Tweet.tagged_with("#{params[:tag_name]}")
+    end
+  end
+
+
 private
   def tweet_params
     params.require(:tweet).permit(:spa_name,:image,:address,:url,:area,:spring_quality,:tag_list)
