@@ -3,9 +3,9 @@
   <div class="container">
     <div class="user">
     <% if @user.image_name.present? %>
-        <img src ="<%= @user.image_name %>" ,width="200", height="200">
+      <img src ="<%= @user.image_name %>" ,width="200", height="200">
     <% else %>
-        <%= image_tag "default.jpg" ,alt:"ユーザーアイコン" ,class:"default_icon"%>
+      <%= image_tag "default.jpg" ,alt:"ユーザーアイコン" ,class:"default_icon"%>
     <% end %>
       <div class= "user__profile">
         <h2><%= @user.name %></h2>
