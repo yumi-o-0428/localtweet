@@ -14,6 +14,7 @@ class TweetsController < ApplicationController
 
   def create
     @tweet = Tweet.new(tweet_params)
+    
     if @tweet.save
       flash[:notice] = "投稿を作成しました"
       redirect_to("/tweets/index")
@@ -53,6 +54,6 @@ class TweetsController < ApplicationController
 
 private
   def tweet_params
-    params.require(:tweet).permit(:spa_name,:image,:address,:url,:area,:spring_quality,:tag_list)
+    params.require(:tweet).permit(:spa_name,:image,:address,:url,:area,:spring_quality,:tag_list).merge(user_id: session[:user_id])
   end
 end
