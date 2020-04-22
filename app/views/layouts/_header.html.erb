@@ -10,13 +10,20 @@
   <% end %>
   
   <div class="header-menus">
+  <% if session[:user_id] %>
+    <div class="search">
+      <%= search_form_for @search, url: tweets_search_path , class:"search__box" do |f| %>
+        <%= f.text_field :tags_name_or_area_or_spring_quality_cont, placeholder: 'キーワードで検索する' ,class:"search__box__text"%>
+          <button type="submit", class="submit-btn">
+            <i class="fas fa-search"></i>
+          </button>
+      <% end %>
+    </div>
     <div class="header-menus__list">
-    <% if session[:user_id] %>
       <%= link_to ("/users/#{session[:user_id]}") do %>
         <i class="fas fa-user-circle"></i>
       <% end %>
         <%= link_to("新規投稿","/tweets/new",{class:"red-btn"}) %>
-        <!-- ログアウト用のリンクを追加してください -->
         <%= link_to("ログアウト", "/logout", {method: :post,class:"blue-btn"}) %>
     <% else %>
         <%= link_to("@LOCALとは", "/about") %>

@@ -2,8 +2,8 @@
 
 <div class="main posts-index">
   <div class="tag_title">
-    <%= "##{params[:tag_name]}" %>
-    <div class="tag_title__info"><%= "@LOCALには「#{params[:tag_name]}」に関する温泉地の投稿が#{@tweets.count}件掲載されています。" %></div>
+    <%= "#{@search_word}" %>
+    <div class="tag_title__info"><%= "@LOCALには「#{@search_word}」に関する温泉地の投稿が#{@tweets.count}件掲載されています。" %></div>
   </div>
   <div class="contents-index">
     <% @tweets.each do |tweet| %>
