@@ -13,11 +13,13 @@ Rails.application.routes.draw do
 
   get "tweets/index" => "tweets#index"
   get "tweets/new" => "tweets#new"
+  get "tweets/search" => "tweets#set_search"
   get "tweets/:id" => "tweets#show"
   post "tweets/create" => "tweets#create"
   get "tweets/:id/edit" => "tweets#edit"
   patch "tweets/:id/update" => "tweets#update"
   post "tweets/:id/destroy" => "tweets#destroy"
   get "tweets/tags/index" => "tweets#tags_index"
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

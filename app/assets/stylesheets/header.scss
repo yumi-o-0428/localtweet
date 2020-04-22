@@ -23,8 +23,35 @@ header {
 .header-menus {
   float: right;
   padding-right: 5px;
+  display: flex;
 
-
+  .search{
+    padding: 26px 10px;
+    
+    &__box{
+      position: relative;
+      &__text{
+        width: 340px;
+        padding: 8px;
+        border-radius: 15px;
+        border: 1px solid #cfc7c6;
+      }
+    }
+    button{
+      font-size: 20px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      padding: 0;
+      appearance: none;
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      display: block;
+      color: #8c8b8b;
+    }
+  }
   &__list{
     float: left;
     //line-height: 90px;
