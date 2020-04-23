@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(id: params[:id])
-    @tweets = @user.tweets
+    @tweets = @user.tweets.includes(:tags)
   end
 
   def new

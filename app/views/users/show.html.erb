@@ -14,9 +14,20 @@
       </div>
     </div>
   </div>
-  <div class="myPage">
-    <div class="myPage__list">投稿一覧</div>
+  <div class="tabs">
+    <div class="tab-content">
+      <input id="tabs-1" type="radio" name="tabs" checked>
+      <label for="tabs-1"><i class="fas fa-address-book"></i>投稿</label>
+      <input id="tabs-2" type="radio" name="tabs">
+      <label for="tabs-2"><i class="fas fa-heart"></i>行きたい</label>
+      <div class="line"></div>
+      <div id="tabs-b1">
+      <%= render "tweets/tweet"%>
+      </div>
+      <div id="tabs-b2">
+      お気に入りを表示
+      </div>
+    </div>
   </div>
-  <%= render "tweets/tweet" %>
 </div>
 <%= render "layouts/footer" %>
