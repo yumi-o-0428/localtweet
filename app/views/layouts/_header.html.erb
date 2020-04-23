@@ -13,7 +13,7 @@
   <% if session[:user_id] %>
     <div class="search">
       <%= search_form_for @search, url: tweets_search_path , class:"search__box" do |f| %>
-        <%= f.text_field :tags_name_or_area_or_spring_quality_cont, placeholder: 'キーワードで検索する' ,class:"search__box__text"%>
+        <%= f.text_field :tags_name_or_area_or_spring_quality_or_address_cont, placeholder: 'キーワードで検索する' ,class:"search__box__text"%>
           <button type="submit", class="submit-btn">
             <i class="fas fa-search"></i>
           </button>

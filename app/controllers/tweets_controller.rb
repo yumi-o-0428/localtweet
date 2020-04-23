@@ -1,7 +1,7 @@
 class TweetsController < ApplicationController
 
   def index
-    @tweets = Tweet.all.order(created_at: :desc)
+    @tweets = Tweet.all.includes(:tags).order(created_at: :desc)
   end
 
   def show

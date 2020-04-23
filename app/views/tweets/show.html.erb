@@ -1,4 +1,5 @@
 <%= render "layouts/header" %>
+
 <div class="main posts-show">
   <div class="container">
     <div class="spa_name">
@@ -33,5 +34,8 @@
     <div class="post-menus">
       <%= link_to("編集","/tweets/#{@tweet.id}/edit")%>
       <%= link_to("削除","/tweets/#{@tweet.id}/destroy",{method:"post"})%>
+    </div>
   </div>
 </div>
+
+<%= render "layouts/footer" %>
