@@ -5,36 +5,6 @@
     <%= "#{@search_word}" %>
     <div class="tag_title__info"><%= "@LOCALには「#{@search_word}」に関する温泉地の投稿が#{@tweets.count}件掲載されています。" %></div>
   </div>
-  <div class="contents-index">
-    <% @tweets.each do |tweet| %>
-      <div class="content">
-      <%= link_to("/tweets/#{tweet.id}") do %>
-        <div class="content__image_box">
-          <img src= "<%= tweet.image %>" ,width="300", height="280">
-        </div>
-        <div class="content__info">
-          <div class="content__info__name">
-          <%= tweet.spa_name %>
-          </div>
-          <div class="content__info__box">
-            <div class="content__info__box__area">
-              <i class="fas fa-map-marker-alt"></i>
-              <%= tweet.area%>
-            </div>
-            <div class="content__info__box__spring_quality">
-              <%= image_tag "onsen_icon.jpg", class:"onsen_icon", size:'18x20' %>
-              <%= tweet.spring_quality %>
-            </div>
-          </div>
-          <div class="content__info__tags">
-          <% tweet.tag_list.each do |tag| %>
-            <%= link_to "##{tag}",tweets_tags_index_path(tag_name: tag),class:"content__info__tags__list" %>
-          <% end %>
-          </div>
-        </div>
-      <% end %>
-    </div>
-  <% end %>
+<%= render "tweet" %>
 </div>
 <%= render "layouts/footer" %>
-</div>

@@ -1,9 +1,7 @@
 <%= render "layouts/header", collections:  "@users"%>
 
 <div class="main posts-index">
-  <div class="index-top">
-  <!--<h1 class="top-text">まだ見ぬ温泉地に出会える旅へ</h1>-->
-  </div>
+  <div class="index-top"></div>
   <div class="contents-text">
     <h1 class="what">
     温泉地の魅力をもっと広く伝えたい
@@ -17,39 +15,11 @@
     温泉地一覧
     </h1>
   </div>
-  <div class="contents-index">
-    <% @tweets.each do |tweet| %>
-      <div class="content">
-      <%= link_to("/tweets/#{tweet.id}") do %>
-        <div class="content__image_box">
-          <img src= "<%= tweet.image %>" ,width="300", height="280">
-        </div>
-        <div class="content__info">
-          <div class="content__info__name">
-          <%= tweet.spa_name %>
-          </div>
-          <div class="content__info__box">
-            <div class="content__info__box__area">
-              <i class="fas fa-map-marker-alt"></i>
-              <%= tweet.area%>
-            </div>
-            <div class="content__info__box__spring_quality">
-              <%= image_tag "onsen_icon.jpg", class:"onsen_icon", size:'18x20' %>
-              <%= tweet.spring_quality %>
-            </div>
-          </div>
-          <div class="content__info__tags">
-          <% tweet.tag_list.each do |tag| %>
-            <%= link_to "##{tag}",tweets_tags_index_path(tag_name: tag),class:"content__info__tags__list" %>
-          <% end %>
-          </div>
-        </div>
-      <% end %>
-      </div>
-    <% end %>
-  </div>
-<%= render "layouts/footer" %>
+<%= render "tweet" %>
 </div>
+
+<%= render "layouts/footer" %>
+
 
 
 
