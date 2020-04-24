@@ -138,14 +138,24 @@
 
   .container{
     margin: 0 auto;
-
-    .spa_name{
-      width: 100%;
-      font-size: 30px;
+    .top_info{
       line-height: 100px;
-      padding-left: 10px;
+      display: flex;
+      .spa_name{
+        font-size: 30px;
+        padding-left: 10px;
+      }
+      .tweet-menus{
+        margin-left: 410px;
+        a{
+          font-size: 13px;
+          text-decoration: none;
+          color: darkcyan;
+          padding-right: 10px;
+        }
+      }
     }
-    
+  
     .content__info__box{
       padding: 5px 12px;
       color: black;
@@ -212,16 +222,7 @@
 }
 
 
-.post-menus {
-  float: right;
-}
 
-.post-menus a, .post-menus input {
-  color: #8899a6;
-  text-decoration: underline;
-  font-size: 20px;
-  padding-right: 40px;
-}
 
 /* 新規投稿posts/new ================================ */
 

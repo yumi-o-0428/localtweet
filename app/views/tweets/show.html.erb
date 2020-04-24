@@ -2,8 +2,20 @@
 
 <div class="main posts-show">
   <div class="container">
-    <div class="spa_name">
-      <%= @tweet.spa_name %>
+    <div class="top_info">
+      <div class="spa_name">
+        <%= @tweet.spa_name %>
+      </div>
+      <% if @tweet.user_id == session[:user_id] %>
+        <div class="tweet-menus">
+          <%= link_to ("/tweets/#{@tweet.id}/edit") do %>
+            <i class="fas fa-edit">編集</i>
+          <% end %>
+          <%= link_to("/tweets/#{@tweet.id}/destroy",{method:"post"}) do%>
+            <i class="fas fa-trash-alt">削除</i>
+          <% end %>
+        </div>
+      <% end %>
     </div>
     <div class="tweets-show-image">
       <img src="<%= @tweet.image %>" width="700" height="400">
@@ -28,12 +40,6 @@
     <div class="url-info">
       <p class="url-content">URL</p>
       <a href="<%= @tweet.url %>"><%= @tweet.url %></a>
-    </div>
-
-  
-    <div class="post-menus">
-      <%= link_to("編集","/tweets/#{@tweet.id}/edit")%>
-      <%= link_to("削除","/tweets/#{@tweet.id}/destroy",{method:"post"})%>
     </div>
   </div>
 </div>
