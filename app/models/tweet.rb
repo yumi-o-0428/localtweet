@@ -1,7 +1,9 @@
 class Tweet < ApplicationRecord
   belongs_to :user
   acts_as_taggable
-
+  has_many :favorites
+  has_many :users, through: :favorites
+  
 
   validates :spa_name,presence: true
   validates :image,presence: true

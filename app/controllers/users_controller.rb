@@ -1,10 +1,9 @@
 class UsersController < ApplicationController
   
-  
-
   def show
     @user = User.find_by(id: params[:id])
-    @tweets = @user.tweets.includes(:tags)
+    @tweets = @user.tweets.includes(:tags).order(created_at: :desc)
+    @favorites = Favorite.where(user_id: @user.id).order(created_at: :desc)
   end
 
   def new
@@ -60,6 +59,7 @@ class UsersController < ApplicationController
     flash[:notice]="ログアウトしました"
     redirect_to("/")
   end
+
 
 private
 def user_params
