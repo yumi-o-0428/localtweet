@@ -1,0 +1,32 @@
+<div class="contents-index">
+  <% @favorites.each do |favorite| %>
+    <% tweet = Tweet.find_by(id: favorite.tweet_id) %>
+      <div class="content">
+      <%= link_to("/tweets/#{tweet.id}") do %>
+        <div class="content__image_box">
+          <img src= "<%= tweet.image %>" ,width="300", height="280">
+        </div>
+        <div class="content__info">
+          <div class="content__info__name">
+          <%= tweet.spa_name %>
+          </div>
+          <div class="content__info__box">
+            <div class="content__info__box__area">
+              <i class="fas fa-map-marker-alt"></i>
+              <%= tweet.area%>
+            </div>
+            <div class="content__info__box__spring_quality">
+              <%= image_tag "onsen_icon.jpg", class:"onsen_icon", size:'18x20' %>
+              <%= tweet.spring_quality %>
+            </div>
+          </div>
+          <div class="content__info__tags">
+          <% tweet.tags.pluck(:name).each do |tag| %>
+            <%= link_to "##{tag}",tweets_tags_index_path(tag_name: tag),class:"content__info__tags__list" %>
+          <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

@@ -140,19 +140,31 @@
     margin: 0 auto;
     .top_info{
       line-height: 100px;
+      width: 700px;
       display: flex;
+      justify-content: space-between;
       .spa_name{
         font-size: 30px;
         padding-left: 10px;
       }
-      .tweet-menus{
-        margin-left: 410px;
         a{
           font-size: 13px;
           text-decoration: none;
           color: darkcyan;
           padding-right: 10px;
         }
+      .favorite{
+        a{
+          border: 1px #8899a6 solid;
+          border-radius: 5px;
+          padding: 5px 10px;
+        }
+      .favorite-btn {
+        color: #8899a6;
+      }
+      .favorite-btn-unlike {
+        color: rgb(223, 86, 86);
+      }
       }
     }
   
