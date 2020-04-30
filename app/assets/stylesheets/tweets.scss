@@ -269,14 +269,11 @@
       font-size: 15px;
       margin-top: 10px;
       padding: 5px 8px;
-      object-fit: cover;
+      
       color: #666;
       position: relative;
       padding: 0;
-      border-radius: 5px;
       cursor: pointer;
-      width: 400px;
-      height: 250px;
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
@@ -285,17 +282,15 @@
       box-sizing: border-box;
       transition: 0.3s ease-out;
       margin-bottom: 30px;
+      img{
+        width: 400px;
+        height: 250px;
+        border-radius: 5px;
+        object-fit: cover;
+      }
     }
     .form_image{
       display: none;
-      color: #57575f;
-      font-size: 16px;
-      letter-spacing: 2px;
-      font-size: 20px;
-      margin-bottom: 30px;
-      cursor: pointer;
-      object-fit: cover;
-      
     }
     .form_tags{
       width: 100%;

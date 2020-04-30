@@ -15,7 +15,7 @@
         <p>写真(必須)</p>
         <div id="img_field" onClick="$('#file').click()" >
           <% if @tweet.image.url.present? %>
-            <%= image_tag(@tweet.image.url) %>
+            <%= image_tag(@tweet.image.url)  %>
           <% else %>
             <%= image_tag "no_image.jpg" ,width:"400", height:"250"%>
           <% end %>
