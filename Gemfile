@@ -59,4 +59,5 @@ gem 'rails-i18n'
 gem "font-awesome-sass"
 gem 'acts-as-taggable-on', '~> 6.0'
 gem 'ransack'
+gem 'bcrypt'
 

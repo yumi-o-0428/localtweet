@@ -43,6 +43,7 @@ GEM
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     arel (7.1.4)
+    bcrypt (3.1.13)
     bindex (0.8.1)
     builder (3.2.4)
     byebug (11.1.1)
@@ -216,6 +217,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts-as-taggable-on (~> 6.0)
+  bcrypt
   byebug
   carrierwave
   coffee-rails (~> 4.2)

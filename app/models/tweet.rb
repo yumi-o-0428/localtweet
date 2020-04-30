@@ -1,8 +1,8 @@
 class Tweet < ApplicationRecord
-  belongs_to :user
   acts_as_taggable
+  belongs_to :user
   has_many :favorites
-  has_many :users, through: :favorites
+  has_many :fav_users, through: :favorites, source: :user
   
 
   validates :spa_name,presence: true

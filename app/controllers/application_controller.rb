@@ -9,4 +9,5 @@ class ApplicationController < ActionController::Base
       @search_word = @search.conditions.first.values.first.value
     end
   end
+
 end
