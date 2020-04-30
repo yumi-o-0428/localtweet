@@ -13,7 +13,12 @@
       <p>温泉地名(必須)</p>
       <%= form.text_field :spa_name, placeholder:"例)草津温泉" ,class:"form_spa_name" %>
       <p>写真(必須)</p>
-      <%= form.file_field :image, class:"form_image" %>
+      <div id="img_field" onClick="$('#file').click()" >
+          <% if @tweet.image.url.present? %>
+            <%= image_tag(@tweet.image.url)  %>
+          <% end %>
+      </div>
+      <%= form.file_field :image, class:"form_image",id: "file" %>
       <p>泉質(必須)</p>
           <div class="label_box">
             <%= form.radio_button :spring_quality, "二酸化炭素塩泉", class:"radio_btn", id:"spring_quality1" %>

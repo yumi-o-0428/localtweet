@@ -10,10 +10,17 @@
             <%= message %>
           </div>
         <% end %>
+        <p>プロフィール写真</p>
+        <div id="img_field" onClick="$('#file').click()" >
+          <% if @user.image_name.present? %>
+            <%= image_tag(@user.image_name)  %>
+          <% else %>
+            <%= image_tag "default.jpg" ,class:"default_icon"%>
+          <% end %>
+        </div>
+        <%= form.file_field :image_name, class:"form_user_image_name", id:"file"%>
         <p>ユーザー名</p>
         <%= form.text_field :name, class:"form_user_name" %>
-        <p>プロフィール写真</p>
-        <%= form.file_field :image_name, class:"form_user_image_name" %>
         <p>メールアドレス</p>
         <%= form.text_field :email, class:"form_user_email" %>
         <input type="submit" value="保存">
