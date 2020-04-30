@@ -19,7 +19,6 @@
           border-radius: 50%;
           border: none;
         }
-  
         img{
           width: 200px;
           height: 200px;
@@ -28,7 +27,6 @@
           border: solid 1px #6b6565;
         }
       }
-      
       
       &__profile{
         padding-left: 90px;
@@ -134,6 +132,36 @@
         margin-bottom: 10px;
       }
     }
+    #img_field {
+      font-size: 15px;
+      margin-top: 10px;
+      padding: 5px 8px;
+      color: #666;
+      position: relative;
+      padding: 0;
+      cursor: pointer;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-color: #fff;
+      overflow: hidden;
+      box-sizing: border-box;
+      transition: 0.3s ease-out;
+      margin-bottom: 30px;
+      img{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: solid 1px #6b6565;
+      }
+      .default_icon{
+        border: none;
+      }
+    }
+    .form_user_image_name{
+      display: none;
+    }
     .form_user_name{
       width: 100%;
       border: 1px solid #d8dadf;
@@ -172,4 +200,5 @@
     float: right;
   }
 }
+
 
