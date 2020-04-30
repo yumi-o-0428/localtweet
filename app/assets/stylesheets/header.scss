@@ -20,6 +20,7 @@ header {
 
 .header-menus {
   float: right;
+  
   padding-right: 5px;
   display: flex;
 
@@ -52,9 +53,12 @@ header {
   }
   &__list{
     float: left;
-    //line-height: 90px;
     font-size: 15px;
     padding:28px;
+    
+    &__about{
+      line-height: 90px;
+    }
     
     .fas {
       font-size: 30px;

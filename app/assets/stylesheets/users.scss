@@ -10,24 +10,29 @@
 
     .user{
       display: flex;
-
-      .default_icon{
+      &__image{
         width: 200px;
         height: 200px;
-        border-radius: 50%;
-        border: none;
-      }
-
-      img{
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: solid 1px #6b6565;
+        .default_icon{
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          border: none;
+          
+        }
+  
+        img{
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          object-fit: cover;
+          border: solid 1px #6b6565;
+        }
       }
       
+      
       &__profile{
-        padding-left:90px;
+        padding-left: 90px;
         width: 100%;
 
         h2{

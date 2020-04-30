@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by(id: params[:id])
     @tweets = @user.tweets.includes(:tags).order(created_at: :desc)
-    @favorites = Favorite.where(user_id: @user.id).order(created_at: :desc)
+    @favorites = Favorite.includes(:tweet,:tags).where(user_id: @user.id).order(created_at: :desc)
   end
 
   def new
@@ -41,8 +41,8 @@ class UsersController < ApplicationController
   end
 
   def login
-    @user = User.find_by(email: params[:session][:email],password: params[:session][:password])
-    if @user
+    @user = User.find_by(email: params[:session][:email])
+    if @user && @user.authenticate(params[:session][:password])
       session[:user_id]=@user.id
       flash[:notice]="ログインしました"
       redirect_to("/tweets/index")

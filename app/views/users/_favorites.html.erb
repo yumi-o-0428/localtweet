@@ -1,6 +1,6 @@
 <div class="contents-index">
-  <% @favorites.each do |favorite| %>
-    <% tweet = Tweet.find_by(id: favorite.tweet_id) %>
+  <% @favorites.preload(:tweet).each do |favorite| %>
+    <% tweet = Tweet.includes(:tags).find_by(id: favorite.tweet_id) %>
       <div class="content">
       <%= link_to("/tweets/#{tweet.id}") do %>
         <div class="content__image_box">
