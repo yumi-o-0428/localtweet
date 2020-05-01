@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200427093521) do
+ActiveRecord::Schema.define(version: 20200501021136) do
 
   create_table "favorites", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "user_id"
@@ -47,7 +47,6 @@ ActiveRecord::Schema.define(version: 20200427093521) do
   end
 
   create_table "tweets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name"
     t.string   "spa_name"
     t.string   "area"
     t.string   "spring_quality"
