@@ -1,24 +1,50 @@
-# README
+## usersテーブル  
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|email|string|null: false, unique: true|
+|image_name|string||
+|password_digest|string|null: false|
+### Association
+- has_many :tweets
+- has_many :favorites
+- has_many :fav_tweets, through: :favorites, source: :tweet
+- has_secure_password
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## tweetsテーブル  
+|Column|Type|Options|
+|------|----|-------|
+|spa_name|string|null: false|
+|area|string|null: false|
+|spring_quality|string|null: false|
+|image|text|null: false|
+|address|text||
+|url|text||
+|user_id|integer|null: false|
+### Association
+- belongs_to :user ,foreign_key: "user_id"
+- has_many :favorites
+- has_many :fav_users, through: :favorites, source: :user
+- acts_as_taggable
 
-* Ruby version
 
-* System dependencies
+## tagsテーブル  
+|Column|Type|Options|
+|------|----|-------|
+|name|string||
+|taggings_count|integer||
+|acts-as-taggable-on|||
+### Association
+- has_many   :tweets
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## favoritesテーブル  
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false|
+|tweet_id|integer|null: false|
+### Association
+- belongs_to :user ,foreign_key: "user_id"
+- belongs_to :tweet,foreign_key: "tweet_id"
+- acts_as_taggable
