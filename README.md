@@ -12,6 +12,7 @@
 - has_secure_password
 
 
+
 ## tweetsテーブル  
 |Column|Type|Options|
 |------|----|-------|
@@ -29,6 +30,7 @@
 - acts_as_taggable
 
 
+
 ## tagsテーブル  
 |Column|Type|Options|
 |------|----|-------|
@@ -37,6 +39,7 @@
 |acts-as-taggable-on|||
 ### Association
 - has_many   :tweets
+
 
 
 ## favoritesテーブル  
