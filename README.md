@@ -1,24 +1,54 @@
-# README
+## usersテーブル  
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|email|string|null: false, unique: true|
+|image_name|string|null: false|
+|password_digest|string|null: false|
+### Association
+- belongs_to :addresses
+- has_many   :items
+- has_many   :comments
+- has_many   :cards
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## tweetsテーブル  
+|Column|Type|Options|
+|------|----|-------|
+|spa_name|string|null: false|
+|area|string|null: false, unique: true|
+|spring_quality|string|null: false|
+|address|text|null: false|
+|url|text|null: false|
+|image|text|null: false|
+|user_id|integer|null: false|
+### Association
+- belongs_to :addresses
+- has_many   :items
+- has_many   :comments
+- has_many   :cards
 
-* Ruby version
 
-* System dependencies
+## tagsテーブル  
+|Column|Type|Options|
+|------|----|-------|
+|name|string||
+|taggings_count|integer||
+|acts-as-taggable-on|||
+### Association
+- belongs_to :addresses
+- has_many   :items
+- has_many   :comments
+- has_many   :cards
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## favoritesテーブル  
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer||
+|tweet_id|integer||
+### Association
+- belongs_to :addresses
+- has_many   :items
+- has_many   :comments
+- has_many   :cards
