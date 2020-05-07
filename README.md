@@ -2,15 +2,28 @@
 # **@LOCAL**概要
 ![スクリーンショット 2020-05-07 17 02 57](https://user-images.githubusercontent.com/61722023/81269836-df05bf00-9084-11ea-9ed6-ec41799d716d.png)
 
+<br></br>
 ## **本番環境**
 http://54.65.108.12
 
 ## **テストユーザー**
 メールアドレス　test@gmail.com  
-パスワード　aaa111
-
-
+パスワード     aaa111
+<br></br>
+<br></br>
 # **制作した経緯**
+<br></br>
+<br></br>
+# **使用技術一覧**
+- html&Sass
+- JavaScript
+- jQuery
+- Ruby
+- Ruby on Rails
+- MySOL
+- AWS
+<br></br>
+<br></br>
 
 
 
