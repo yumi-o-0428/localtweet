@@ -42,6 +42,7 @@ http://54.65.108.12
 <br></br>
 ## **トップページ**
 ![スクリーンショット 2020-05-07 19 29 24](https://user-images.githubusercontent.com/61722023/81284862-a3292480-9099-11ea-8d0a-eda9192b9d9e.png)
+![スクリーンショット 2020-05-07 19 29 24](https://user-images.githubusercontent.com/61722023/81284862-a3292480-9099-11ea-8d0a-eda9192b9d9e.png)
 
 
 ## usersテーブル  
