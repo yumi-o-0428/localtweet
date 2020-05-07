@@ -69,4 +69,4 @@ gem "font-awesome-sass"
 gem 'acts-as-taggable-on', '~> 6.0'
 gem 'ransack'
 gem 'bcrypt'
-
+gem 'fog-aws'
