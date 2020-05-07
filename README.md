@@ -41,8 +41,7 @@ http://54.65.108.12
 パスワードは、gemファイル「bcrypt」を導入し、暗号化してDBに保存されるようにしています。
 <br></br>
 ## **トップページ**
-![スクリーンショット 2020-05-07 19 29 24](https://user-images.githubusercontent.com/61722023/81284547-331a9e80-9099-11ea-9b26-0a5358b16e44.png)
-
+![スクリーンショット 2020-05-07 19 29 24](https://user-images.githubusercontent.com/61722023/81284862-a3292480-9099-11ea-8d0a-eda9192b9d9e.png)
 
 
 ## usersテーブル  
