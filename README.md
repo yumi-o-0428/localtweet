@@ -1,5 +1,5 @@
 # **README**
-# **@LOCAL**概要
+# **@LOCAL**(アットローカル)概要
 ![スクリーンショット 2020-05-07 17 02 57](https://user-images.githubusercontent.com/61722023/81269836-df05bf00-9084-11ea-9ed6-ec41799d716d.png)
 
 ## **本番環境**
