@@ -33,7 +33,7 @@ http://54.65.108.12
 - jQuery
 - Ruby
 - Ruby on Rails
-- MySOL
+- MySQL
 - AWS
 <br></br>
 <br></br>
