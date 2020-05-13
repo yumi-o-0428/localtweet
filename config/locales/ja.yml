@@ -6,4 +6,5 @@ ja:
         image: 写真
         spring_quality: 泉質
         area: エリア
-        
+      user:
+        password: パスワード

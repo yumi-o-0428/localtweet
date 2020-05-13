@@ -43,6 +43,8 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
 end
 
 group :development do
@@ -70,3 +72,4 @@ gem 'acts-as-taggable-on', '~> 6.0'
 gem 'ransack'
 gem 'bcrypt'
 gem 'fog-aws'
+
