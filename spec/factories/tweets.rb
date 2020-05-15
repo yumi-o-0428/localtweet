@@ -6,8 +6,8 @@ FactoryBot.define do
     spring_quality   {"酸性泉"}
     address          {"aaa"}
     url              {"bbb"}
-    image            {File.open("#{Rails.root}/spec/fixtures/test.jpg")}
-    user_id          {"1"}
+    image            {File.new("#{Rails.root}/spec/fixtures/test.jpg")}
+    user
   end
 
 end
