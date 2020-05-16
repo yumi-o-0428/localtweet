@@ -7,6 +7,7 @@ FactoryBot.define do
     address          {"aaa"}
     url              {"bbb"}
     image            {File.new("#{Rails.root}/spec/fixtures/test.jpg")}
+    created_at       { Faker::Time.between(from: DateTime.now - 2, to: DateTime.now) }
     user
   end
 
