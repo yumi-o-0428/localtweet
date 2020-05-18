@@ -27,12 +27,23 @@ describe TweetsController do
     end
   end
 
+
   describe 'GET #new' do
     it "new.html.erbに遷移すること" do
       get :new
       expect(response).to render_template :new
     end
   end
+
+
+  describe 'GET #show' do
+    it "show.html.erbに遷移すること" do
+      tweet = create(:tweet)
+      get :show, params: { id: tweet }
+      expect(response).to render_template :show
+    end
+  end
+
 
   describe 'GET #edit' do
     it "@tweetに正しい値が入っていること" do
@@ -45,6 +56,51 @@ describe TweetsController do
       tweet = create(:tweet)
       get :edit, params: { id: tweet }
       expect(response).to render_template :edit
+    end
+  end
+
+
+  describe 'POST #create' do
+    let(:params) { { user_id: user.id, tweet: attributes_for(:tweet)} }
+
+    context 'ログインしている場合' do
+      before do
+        session[:user_id]
+      end
+
+      context '保存に成功した場合' do
+        subject {
+          post :create,
+          params: params
+        }
+
+          it 'tweetを保存すること' do
+            expect{ subject }.to change(Tweet, :count).by(1)
+          end
+
+          it 'tweets_index_pathへリダイレクトすること' do
+            subject
+            expect(response).to redirect_to("/tweets/index")
+          end
+      end
+
+      context '保存に失敗した場合' do
+        let(:invalid_params) { { user_id: user.id, tweet: attributes_for(:tweet, spa_name: nil, area: nil, spring_quality: nil, image: nil) } }
+
+        subject {
+          post :create,
+          params: invalid_params
+        }
+
+        it 'tweetを保存しないこと' do
+          expect{ subject }.not_to change(Tweet, :count)
+        end
+
+        it 'new.html.hamlに遷移すること' do
+          subject
+          expect(response).to render_template :new
+        end
+      end
     end
   end
 end
