@@ -307,7 +307,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   compass-rails (= 3.1.0)
   factory_bot_rails
-  faker (~> 2.8)
+  faker
   fog-aws
   font-awesome-sass
   jbuilder (~> 2.5)

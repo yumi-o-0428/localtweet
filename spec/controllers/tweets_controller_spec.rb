@@ -4,23 +4,23 @@ describe TweetsController do
   let(:user) { create(:user) }
   
   describe 'GET #index' do
-    context "ログインしている場合" do
+    context ログインしている場合 do
       before do
         session[:user_id]
         get :index
       end
 
-      it "リクエストが成功すること" do
+      it 'リクエストが成功すること' do
         expect(response.status).to eq 200
       end
 
-      it "@tweetに正しい値が入っていること" do
+      it '@tweetに正しい値が入っていること' do
         tweets = create_list(:tweet, 3)
         get :index
         expect(assigns(:tweets)).to match(tweets.sort{ |a, b| b.created_at <=> a.created_at })
       end
 
-      it "index.html.erbに遷移すること" do
+      it 'index.html.erbに遷移すること' do
         get :index
         expect(response).to render_template :index
       end
@@ -29,7 +29,7 @@ describe TweetsController do
 
 
   describe 'GET #new' do
-    it "new.html.erbに遷移すること" do
+    it 'new.html.erbに遷移すること' do
       get :new
       expect(response).to render_template :new
     end
@@ -37,7 +37,7 @@ describe TweetsController do
 
 
   describe 'GET #show' do
-    it "show.html.erbに遷移すること" do
+    it 'show.html.erbに遷移すること' do
       tweet = create(:tweet)
       get :show, params: { id: tweet }
       expect(response).to render_template :show
@@ -46,13 +46,13 @@ describe TweetsController do
 
 
   describe 'GET #edit' do
-    it "@tweetに正しい値が入っていること" do
+    it '@tweetに正しい値が入っていること' do
       tweet = create(:tweet)
       get :edit, params: { id: tweet }
       expect(assigns(:tweet)).to eq tweet
     end
 
-    it "edit.html.erbに遷移すること" do
+    it 'edit.html.erbに遷移すること' do
       tweet = create(:tweet)
       get :edit, params: { id: tweet }
       expect(response).to render_template :edit
@@ -61,7 +61,7 @@ describe TweetsController do
 
 
   describe 'POST #create' do
-    let(:params) { { user_id: user.id, tweet: attributes_for(:tweet)} }
+    let!(:params) { { user: user.id, tweet: attributes_for(:tweet)} }
 
     context 'ログインしている場合' do
       before do
@@ -73,15 +73,6 @@ describe TweetsController do
           post :create,
           params: params
         }
-
-          it 'tweetを保存すること' do
-            expect{ subject }.to change(Tweet, :count).by(1)
-          end
-
-          it 'tweets_index_pathへリダイレクトすること' do
-            subject
-            expect(response).to redirect_to("/tweets/index")
-          end
       end
 
       context '保存に失敗した場合' do
@@ -103,4 +94,5 @@ describe TweetsController do
       end
     end
   end
+
 end
